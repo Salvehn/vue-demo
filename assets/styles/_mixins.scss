@@ -22,10 +22,11 @@
     }
 }
 
-@mixin shadow{
+@mixin shadow {
     box-shadow: $shadow;
 }
-@mixin input{
+
+@mixin input {
     border-radius: 4px;
     background-color: $bg;
     padding-top: 10px;
@@ -41,5 +42,16 @@
 
     ::placeholder {
         color: #B4B4B4;
+        font-size: inherit;
     }
+}
+
+@mixin label {
+    line-height: 13px;
+    letter-spacing: -0.02em;
+    color: $secondaryText;
+    font-size: 10px;
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 4px;
 }
