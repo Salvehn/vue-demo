@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink to="/add-product">
+    <NuxtLink to="/addproduct">
         Добавить новый продукт
     </NuxtLink>
 </template>

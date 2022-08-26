@@ -1,0 +1,45 @@
+@import '~/assets/styles/_variables.scss';
+
+@mixin button($bg) {
+
+
+    background-color: $bg;
+
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($bg, 25%);
+    }
+
+    &:disabled {
+        background-color: #EEEEEE;
+        color: #B4B4B4;
+        cursor: not-allowed;
+        pointer-events: all !important;
+    }
+}
+
+@mixin shadow{
+    box-shadow: $shadow;
+}
+@mixin input{
+    border-radius: 4px;
+    background-color: $bg;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 15px;
+    color: #B4B4B4;
+    border: none;
+
+    ::placeholder {
+        color: #B4B4B4;
+    }
+}
