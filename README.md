@@ -1,7 +1,7 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
+## Caveat
+```
+!!! Webpage isn't responsive, please use 16:10 1440x900 resolution while testing.
+```
 ## Setup
 
 Make sure to install the dependencies:
@@ -10,33 +10,14 @@ Make sure to install the dependencies:
 # yarn
 yarn install
 
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
 ## Development Server
 
 Start the development server on http://localhost:3000
 
-```bash
-npm run dev
-```
+# yarn
+yarn dev
 
-## Production
 
-Build the application for production:
+From index page navigate to on http://localhost:3000/addproduct
 
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+Set window resolution to 1440x900 
