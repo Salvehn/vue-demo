@@ -1,17 +1,13 @@
 
 <template>
     <div class="inputContainer">
-
         <label v-bind:class="{ 'required': required }">
             {{ label }}
-
         </label>
-
         <input :class="{ 'error': errorMessage }" type="text" :name="name" :required="required"
             :placeholder="placeholder" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
         <span v-if="errorMessage" class="hint" :class="{ 'errorMessage': errorMessage }">{{ errorMessage }}</span>
     </div>
-
 </template>
 
 <script>
@@ -60,9 +56,10 @@ label {
     color: $errorColor  !important;
 }
 
-.hint{
+.hint {
     @include inputHintMixin;
 }
+
 input {
     @include inputMixin;
 }

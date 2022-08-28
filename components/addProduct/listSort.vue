@@ -3,7 +3,9 @@
 </template>
 <script>
 import { useProductsStore } from '~/store/products'
+
 const options = [{ label: 'По умолчанию', value: 'default' }, { label: 'По наименованию', value: 'name', default: true }, { label: 'По цене', value: 'price' }]
+
 export default {
 
     setup() {
@@ -28,13 +30,14 @@ export default {
                 } else {
                     this.reverse = false
                 }
+
                 let type = this.selected
+
                 if (type == 'default') {
                     type = options.find((x) => x.default)?.value
                     if (type) {
                         this.store.setSort(type, false)
                     }
-
                 } else {
                     this.store.setSort(type, this.reverse)
                 }

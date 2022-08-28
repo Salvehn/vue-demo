@@ -8,8 +8,6 @@
                 <add-product-sidebar class="sidebar" />
                 <add-product-mobile-sidebar class="mobileSidebar" />
             </div>
-
-
             <add-product-list />
         </div>
     </div>
@@ -43,7 +41,8 @@
 
 }
 
-@media screen and (max-width: 500px), (orientation: portrait) {
+@media screen and (max-width: 500px),
+(orientation: portrait) {
     .page {
         margin-top: 75px;
     }

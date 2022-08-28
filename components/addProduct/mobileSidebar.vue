@@ -5,7 +5,6 @@
             <ui-kit-paper>
                 <add-product-form />
             </ui-kit-paper>
-
         </div>
     </div>
 
@@ -30,21 +29,23 @@ export default {
     height: 100vh;
     top: 0;
     left: 0;
-   
-}
-.sidebar:deep(label){
-     font-size: 14px !important;
-}
-.sidebar:deep(input){
-     font-size: 16px !important;
-}
-.sidebar:deep(textarea){
-     font-size: 16px !important;
-}
-.sidebar:deep(button){
-     font-size: 16px !important;
 }
 
+.sidebar:deep(label) {
+    font-size: 14px !important;
+}
+
+.sidebar:deep(input) {
+    font-size: 16px !important;
+}
+
+.sidebar:deep(textarea) {
+    font-size: 16px !important;
+}
+
+.sidebar:deep(button) {
+    font-size: 16px !important;
+}
 
 .burger {
 

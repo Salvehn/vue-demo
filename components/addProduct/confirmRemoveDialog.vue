@@ -7,7 +7,6 @@
                 <ui-kit-button text="Нет" @click="cancel" color="secondary" />
             </ui-kit-group>
         </ui-kit-stack>
-
     </ui-kit-modal>
 </template>
 <script>
@@ -19,29 +18,19 @@ export default {
 
         return { store }
     },
-
     computed: {
-
         opened() {
             return this.store.selectedProduct != null
         }
-
     },
-
-
-
     methods: {
         confirm() {
-            console.log('confirm',this.store.selectedProduct)
             this.store.remove(this.store.selectedProduct)
             this.store.setSelected(null)
         },
         cancel() {
-
             this.store.setSelected(null)
         },
-
-
     }
 }
 </script>

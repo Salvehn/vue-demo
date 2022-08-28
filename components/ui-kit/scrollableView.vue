@@ -1,4 +1,3 @@
-
 <template>
     <div class="scrollable" v-bind:class="{active: isActive == true}">
         <slot />

@@ -1,12 +1,9 @@
 <template>
-
     <div class="modal-overlay" v-bind:class="{ 'closed': !opened }">
         <div class="modal">
             <slot />
         </div>
-
     </div>
-
 </template>
 
 <script>
@@ -18,7 +15,6 @@ export default {
         }
     }
 
-
 }
 </script>
 <style lang="scss" scoped>
@@ -27,7 +23,6 @@ export default {
 }
 
 .modal-overlay {
-
     position: fixed;
     top: 0;
     bottom: 0;

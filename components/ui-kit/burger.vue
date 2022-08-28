@@ -1,5 +1,5 @@
 <template>
-    <div class="container" @click="toggle" :class="{'change': active}">
+    <div class="container" @click="toggle" :class="{ 'change': active }">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -12,8 +12,8 @@ export default {
             active: false
         }
     },
-    methods:{
-        toggle(){
+    methods: {
+        toggle() {
             this.active = !this.active
         }
     }

@@ -17,7 +17,5 @@
         line-height: 35px;
         font-weight: 600;
     }
-
-
 }
 </style>

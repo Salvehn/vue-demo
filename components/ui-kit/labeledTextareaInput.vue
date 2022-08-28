@@ -1,16 +1,12 @@
 <template>
     <div class="inputContainer">
-
         <label v-bind:class="{ 'required': required }">
             {{ label }}
         </label>
-
         <textarea :rows="rows" :name="name" :required="required" :placeholder="placeholder" :value="modelValue"
             @input="$emit('update:modelValue', $event.target.value)" />
         <span v-if="errorMessage" class="hint" :class="{ 'errorMessage': errorMessage }">{{ errorMessage }}</span>
-
     </div>
-
 </template>
 
 <script>
@@ -20,12 +16,10 @@ export default {
     name: 'LabeledTextareaInput',
     mixins: [vuelidateInput, labeledInput],
     props: {
-
         modelValue: {
             type: String,
             default: ""
         },
-
         rows: {
             type: Number,
 
@@ -53,9 +47,11 @@ label {
     flex-direction: column;
     width: 100%;
 }
-.hint{
+
+.hint {
     @include inputHintMixin;
 }
+
 .error {
     border: 1px solid $errorColor;
     border-radius: 4px;
@@ -64,6 +60,7 @@ label {
 .errorMessage {
     color: $errorColor  !important;
 }
+
 textarea {
     @include inputMixin;
     resize: none;

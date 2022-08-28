@@ -42,7 +42,6 @@ export const useProductsStore = defineStore({
             this.list = this.list.filter((x) => x.id != id)
         },
         setSort(type, reverse) {
-        
             this.sort.type = type;
             this.sort.reverse = reverse;
         }

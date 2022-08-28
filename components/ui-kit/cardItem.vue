@@ -1,4 +1,3 @@
-
 <template>
     <ui-kit-paper class="сontainer">
         <ui-kit-icons-trash class="trash" @click="handleDelete" />
@@ -10,9 +9,7 @@
                 <slot />
             </div>
         </div>
-
     </ui-kit-paper>
-
 </template>
 
 <script>
@@ -21,7 +18,6 @@ export default {
 
     name: 'cardItem',
     props: {
-
         name: {
             type: String,
             required: true,
@@ -71,12 +67,9 @@ export default {
     width: 100%;
 
     &:hover {
-
-
         .trash {
             display: block;
         }
-
     }
 
 }

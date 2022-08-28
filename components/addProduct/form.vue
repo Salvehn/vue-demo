@@ -10,7 +10,6 @@
             v-model.number="v$.form.price.$model" :errorMessage="fieldError('price')" />
         <ui-kit-button text="Добавить товар" color="primary" type="submit" :disabled="v$.form.$invalid" />
     </form>
-
 </template>
 <script>
 import { useProductsStore } from '~/store/products'
@@ -43,11 +42,9 @@ export default {
                 name: {
                     required: helpers.withMessage('Поле является обязательным', required)
                 },
-
                 poster: {
                     required: helpers.withMessage('Поле является обязательным', required),
                     url: helpers.withMessage('Не являетя ссылкой', url)
-
                 },
                 price: {
                     required: helpers.withMessage('Поле является обязательным', required),

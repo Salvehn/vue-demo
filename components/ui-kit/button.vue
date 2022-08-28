@@ -1,5 +1,4 @@
 <template>
-
     <button class="button" :class="color" :type="type" :disabled="disabled">
         {{ text }}
     </button>
@@ -19,13 +18,11 @@ export default {
             type: String,
             default: 'primary',
         },
-        disabled:{
+        disabled: {
             type: Boolean,
             default: false
         }
     },
-
-
 
 }
 </script>
@@ -33,6 +30,7 @@ export default {
 @import '~/assets/styles/_variables.scss';
 @import '~/assets/styles/_mixins.scss';
 @import '~/assets/styles/button.scss';
+
 .button {
     font-style: normal;
     color: $color-white;

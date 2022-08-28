@@ -1,16 +1,12 @@
 <template>
     <ui-kit-scrollable-view :isActive="false">
-
         <transition-group name="container" class="container" tag="div" appear mode="out-in">
-
             <ui-kit-card-item v-for="item in items" :key="item.id" class="container-item" :poster="item.poster"
                 :name="item.name" :description="item.description" @onDelete="handleDelete(item.id)">
                 <span class="price">{{ new Intl.NumberFormat('fr-FR').format(item.price) + ' ' + item.currency
                 }}</span>
             </ui-kit-card-item>
-
         </transition-group>
-
     </ui-kit-scrollable-view>
     <add-product-confirm-remove-dialog />
 </template>
@@ -36,7 +32,7 @@ export default {
 
         return { store }
     },
- 
+
     computed: {
         items() {
             return this.store.list

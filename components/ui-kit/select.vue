@@ -5,7 +5,6 @@
             <option v-for="option in options" :value="option.value">{{ option.label }}</option>
         </select>
     </div>
-
 </template>
 
 <script>
@@ -77,7 +76,6 @@ export default {
 }
 
 select {
-
     border-radius: 4px;
     border: 0;
     position: relative;
@@ -89,7 +87,6 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
     padding: 10px 27px 11px 16px;
     cursor: pointer;
 
