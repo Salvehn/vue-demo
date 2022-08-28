@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/sourcesanspro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+html,
+body {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #E5E5E5;
+}

@@ -1,0 +1,7 @@
+.primary {
+    @include button($primaryButton);
+}
+
+.secondary {
+    @include button(#FF8484);
+}

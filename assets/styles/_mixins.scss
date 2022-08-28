@@ -1,0 +1,63 @@
+@import '~/assets/styles/_variables.scss';
+
+@mixin button($bg) {
+
+
+    background-color: $bg;
+
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($bg, 25%);
+    }
+
+    &:disabled {
+        background-color: #EEEEEE;
+        color: #B4B4B4;
+        cursor: not-allowed;
+        pointer-events: all !important;
+    }
+}
+
+@mixin labelMixin {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+    color: $secondaryText;
+
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 4px;
+}
+
+
+@mixin inputMixin {
+    font-size: 12px;
+    box-shadow: $inputShadow;
+    border-radius: 4px;
+    background-color: $bg;
+    padding: 10px 16px 11px 16px;
+    // padding: 0.83em 1.33em 0.916em 1.33em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 15px;
+    // line-height: 1.25em;
+    color: #3F3F3F !important;
+    border: none;
+
+    ::placeholder {
+        color: #B4B4B4;
+        font-size: inherit;
+    }
+}
+
+@mixin inputHintMixin {
+    font-size: 8px;
+    margin-top: 4px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+}
