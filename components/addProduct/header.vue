@@ -1,8 +1,7 @@
 <template>
     <div class="header">
         <span>Добавление элемента</span>
-        <ui-kit-select 
-            :options="[{ label: 'По умолчанию', value: 'name' }, { label: 'По цене', value: 'price' }]" />
+        <add-product-list-sort/>
     </div>
 </template>
 <style lang="scss" scoped>

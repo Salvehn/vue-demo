@@ -32,6 +32,7 @@ export default {
 
     methods: {
         confirm() {
+            console.log('confirm',this.store.selectedProduct)
             this.store.remove(this.store.selectedProduct)
             this.store.setSelected(null)
         },

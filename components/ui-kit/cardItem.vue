@@ -1,7 +1,7 @@
 
 <template>
     <ui-kit-paper class="сontainer">
-        <UiKitIconsTrash class="trash" @click="handleDelete" />
+        <ui-kit-icons-trash class="trash" @click="handleDelete" />
         <img class="poster" src="~assets/images/cardImage.png" />
         <div class="content">
             <span class="name">{{ name }}</span>
@@ -69,7 +69,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-    box-shadow: $shadow;
+
     &:hover {
 
 
@@ -89,16 +89,19 @@ export default {
 }
 
 .name {
+    font-size: 20px;
+    // line-height: 0.65em;
     line-height: 13px;
     letter-spacing: -0.02em;
     color: $primaryText;
-    font-size: 20px;
+
     font-weight: 600;
     position: relative;
     align-self: flex-start;
 }
 
 .description {
+    // font-size: 0.8em;
     font-size: 16px;
     flex-grow: 1;
 }

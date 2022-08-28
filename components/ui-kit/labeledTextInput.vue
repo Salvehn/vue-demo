@@ -7,8 +7,9 @@
 
         </label>
 
-        <input type="text" :name="name" :required="required" :placeholder="placeholder" :value="modelValue"
-            @input="$emit('update:modelValue', $event.target.value)" />
+        <input :class="{ 'error': errorMessage }" type="text" :name="name" :required="required"
+            :placeholder="placeholder" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
+        <span v-if="errorMessage" class="hint" :class="{ 'errorMessage': errorMessage }">{{ errorMessage }}</span>
     </div>
 
 </template>
@@ -37,10 +38,10 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/styles/_variables.scss';
 @import '~/assets/styles/main.scss';
-@import '~/assets/styles/mixins.scss';
+@import '~/assets/styles/_mixins.scss';
 
 label {
-    @extend label;
+    @include labelMixin;
 }
 
 .inputContainer {
@@ -51,12 +52,18 @@ label {
 }
 
 .error {
-    border: 1px solid #FF8484;
+    border: 1px solid $errorColor;
     border-radius: 4px;
 }
 
+.errorMessage {
+    color: $errorColor  !important;
+}
+
+.hint{
+    @include inputHintMixin;
+}
 input {
-    @include shadow;
-    @include input;
+    @include inputMixin;
 }
 </style>

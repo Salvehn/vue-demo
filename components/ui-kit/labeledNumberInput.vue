@@ -4,9 +4,9 @@
         <label v-bind:class="{ 'required': required }">
             {{ label }}
         </label>
-        <input type="text" :name="name" :class="errorMessage && $style.error" :required="required"
+        <input :class="{ 'error': errorMessage }" type="text" :name="name" :required="required"
             :placeholder="placeholder" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
-        <div v-if="errorMessage" v-cloak class="hint" :class="$style.error">{{ errorMessage }}</div>
+        <span v-if="errorMessage" class="hint" :class="{ 'errorMessage': errorMessage }">{{ errorMessage }}</span>
     </div>
 
 </template>
@@ -20,7 +20,7 @@ export default {
     props: {
         modelValue: {
             type: Number,
-            default: 0
+            default: undefined
         }
     },
     computed: {
@@ -33,10 +33,10 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/styles/_variables.scss';
 @import '~/assets/styles/main.scss';
-@import '~/assets/styles/mixins.scss';
+@import '~/assets/styles/_mixins.scss';
 
 label {
-    @extend label;
+    @include labelMixin;
 }
 
 
@@ -46,19 +46,19 @@ label {
     flex-direction: column;
     width: 100%;
 }
-
+.hint{
+    @include inputHintMixin;
+}
 .error {
-    border: 1px solid $secondaryText;
+    border: 1px solid $errorColor;
     border-radius: 4px;
 }
 
 .errorMessage {
-    color: $secondaryText  !important;
+    color: $errorColor  !important;
 }
 
 input {
-
-    @include shadow;
-    @include input;
+    @include inputMixin;
 }
 </style>

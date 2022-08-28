@@ -7,7 +7,7 @@
 
         <textarea :rows="rows" :name="name" :required="required" :placeholder="placeholder" :value="modelValue"
             @input="$emit('update:modelValue', $event.target.value)" />
-
+        <span v-if="errorMessage" class="hint" :class="{ 'errorMessage': errorMessage }">{{ errorMessage }}</span>
 
     </div>
 
@@ -41,10 +41,10 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/styles/_variables.scss';
 @import '~/assets/styles/main.scss';
-@import '~/assets/styles/mixins.scss';
+@import '~/assets/styles/_mixins.scss';
 
 label {
-    @extend label;
+    @include labelMixin;
 }
 
 .inputContainer {
@@ -53,15 +53,19 @@ label {
     flex-direction: column;
     width: 100%;
 }
-
+.hint{
+    @include inputHintMixin;
+}
 .error {
-    border: 1px solid #FF8484;
+    border: 1px solid $errorColor;
     border-radius: 4px;
 }
 
+.errorMessage {
+    color: $errorColor  !important;
+}
 textarea {
-    @include shadow;
-    @include input;
+    @include inputMixin;
     resize: none;
 }
 </style>

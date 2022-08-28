@@ -6,8 +6,9 @@
 <style lang="scss" scoped>
 @import '~/assets/styles/_variables.scss';
 @import '~/assets/styles/mixins.scss';
+
 .paper {
-    @include shadow;
+    box-shadow: $paperShadow;
     width: 100%;
     background-color: $bg;
     height: fit-content;

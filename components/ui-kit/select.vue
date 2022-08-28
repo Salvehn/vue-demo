@@ -1,17 +1,7 @@
 
 <template>
-    <!-- <div class="do" :tabindex="tabindex" @blur="open = false">
-        <div class="selected" :class="{ open: open }" @click="open = !open">
-            {{ selected.label }}
-        </div>
-        <div class="items" :class="{ selectHide: !open }">
-            <div v-for="(option, i) of options" :key="i" @click="handleSelect">
-                {{ option.label }}
-            </div>
-        </div>
-    </div> -->
     <div class="selectWrapper">
-        <select class="select" :value="modelValue" title="sel" @input="$emit('update:modelValue', $event.target.value)">
+        <select :value="modelValue" @input="$emit('update:modelValue', $event.target.value)">
             <option v-for="option in options" :value="option.value">{{ option.label }}</option>
         </select>
     </div>
@@ -26,7 +16,7 @@ export default {
             required: true,
         },
         modelValue: {
-            type: Object,
+            type: String,
             default(props) {
                 return props.options[0].value
             }
@@ -52,7 +42,8 @@ export default {
             this.selected = option;
             this.open = false;
             this.$emit('input', option);
-        }
+        },
+
     },
     mounted() {
         this.$emit("input", this.selected);
@@ -67,23 +58,6 @@ export default {
     height: fit-content;
     vertical-align: middle;
     position: relative;
-
-
-    // &::after {
-    //     border-style: solid;
-    //     border-width: 0.1em 0.1em 0 0;
-    //     content: '';
-    //     display: inline-block;
-    //     height: 0.25em;
-    //     left: 5px;
-    //     position: relative;
-    //     top: 0.43em;
-    //     transform: rotate(135deg);
-    //     vertical-align: top;
-    //     width: 0.25em;
-    //     position: absolute;
-
-    // }
 
     &::after {
         border-style: solid;
@@ -100,10 +74,9 @@ export default {
         bottom: 0.05em;
         width: 0.25em;
     }
-
 }
 
-.select {
+select {
 
     border-radius: 4px;
     border: 0;
@@ -119,11 +92,11 @@ export default {
 
     padding: 10px 27px 11px 16px;
     cursor: pointer;
+
     &:focus {
         border: none;
         outline: none !important;
     }
-
 
 
     .options {
@@ -147,12 +120,6 @@ export default {
         }
     }
 
-
-
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.active {
-    display: none;
 }
 </style>

@@ -22,22 +22,30 @@
     }
 }
 
-@mixin shadow {
-    box-shadow: $shadow;
+@mixin labelMixin {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+    color: $secondaryText;
+
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 4px;
 }
 
-@mixin input {
+
+@mixin inputMixin {
+    font-size: 12px;
+    box-shadow: $inputShadow;
     border-radius: 4px;
     background-color: $bg;
-    padding-top: 10px;
-    padding-bottom: 11px;
-    padding-left: 16px;
-    padding-right: 16px;
-    font-size: 12px;
+    padding: 10px 16px 11px 16px;
+    // padding: 0.83em 1.33em 0.916em 1.33em;
     font-weight: 400;
     font-style: normal;
     line-height: 15px;
-    color: #B4B4B4;
+    // line-height: 1.25em;
+    color: #3F3F3F !important;
     border: none;
 
     ::placeholder {
@@ -46,12 +54,10 @@
     }
 }
 
-@mixin label {
-    line-height: 13px;
-    letter-spacing: -0.02em;
-    color: $secondaryText;
-    font-size: 10px;
-    position: relative;
-    align-self: flex-start;
-    margin-bottom: 4px;
+@mixin inputHintMixin {
+    font-size: 8px;
+    margin-top: 4px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
 }
